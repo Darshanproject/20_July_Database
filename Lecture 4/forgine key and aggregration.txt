@@ -1,0 +1,41 @@
+SELECT SUM(salary) FROM salary;
+SELECT AVG(salary) FROM salary;
+SELECT MIN(salary) FROM salary;
+
+
+
+
+table 
+create database databse_name;
+use database_name;
+create table table_name(
+cloumn_name datatype; int bigint varchar
+id int (20),
+name varchar(20)
+);
+
+
+insert into table (cloumns_name) values (1,"MEET");
+
+CREATE TABLE orders1(
+id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+name varchar (255) NOT NULL,
+age int (255) NOT NULL,
+email varchar(255) NOT NULL
+);
+
+
+DROP TABLE orders1;
+
+
+CREATE TABLE orders1(
+id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+name varchar (255) NOT NULL,
+age int (255) NOT NULL,
+email varchar(255) NOT NULL,
+sa_id int(255)  ,
+    FOREIGN KEY (sa_id) REFERENCES salary(id)
+);
+
+
+INSERT INTO orders1 (name,age,email,sa_id) VALUES("Meet",25,"meet@gmail.com",2)

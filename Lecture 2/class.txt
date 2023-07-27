@@ -1,0 +1,101 @@
+alter table employee CHANGE 'id' id int PRIMARY KEY AUTO_INCREMENT NOT null;
+
+
+create table employee(
+
+id int primary key not null auto_increment,
+ename varchar(20) not null,
+esal int not null
+);
+
+insert into employee (ename,esal) values ('amit',87899),
+('sumit',8899),
+('mitesh',6099);
+
+
+create table dept(
+    dept_id int PRIMARY KEY AUTO_INCREMENT NOT null,
+    dname varchar(50) not null,
+    dloc varchar(50) not null,
+    emp_id int not null,
+    FOREIGN KEY (emp_id) REFERENCES employee(id)    
+    );
+
+
+insert into dept(dname,dloc,emp_id) values ('IT','Ahmedabad',1),
+('Sales','Surat',1),
+('HR','Rajkot',1);
+
+insert into dept(dname,dloc,emp_id) values ('HR','Rajkot',3),
+('Sales','Surat',4),
+('IT','Bangalore',2);
+
+
+create table orders(
+oid int PRIMARY KEY AUTO_INCREMENT NOT null,
+odate DATETIME not null,
+person_id int NOT null,
+FOREIGN KEY (person_id) REFERENCES person(pid)
+);
+
+insert into orders (odate,person_id) values ('2023-01-07',3)
+
+update person set salary=40000 where pid=4
+
+alter table employee add email varchar(20) not null UNIQUE
+
+select ename from employee where esal>15000
+
+
+
+DELETE from employee WHERE id=4;
+
+Aggregate Functions
+
+SELECT MAX(salary) FROM person;
+SELECT COUNT(ID) FROM employee
+SELECT Min(salary) FROM person;
+SELECT SUM(salary) FROM person
+SELECT AVG(salary) FROM person;
+
+SELECT salary FROM person ORDER BY salary ASC;
+SELECT PID,pname,salary FROM person ORDER BY salary ASC;
+SELECT pid,pname,salary from person ORDER BY salary DESC;
+
+select pid,pname,salary from person WHERE salary = (SELECT MAX(salary) FROM person);
+select pid,pname,salary from person WHERE salary = (SELECT MIN(salary) FROM person);
+
+
+
+
+
+INSERT INTO orders (id,name,mobile) VALUES(1,"Bhavik",98745632114);
+
+
+ALTER TABLE orders DROP mobile
+
+ALTER TABLE `person` CHANGE `id` `id` INT(255) NULL DEFAULT NULL AUTO_INCREMENT, add PRIMARY KEY (`id`);
+
+
+SELECT * FROM `orders` WHERE id=4;
+
+SELECT MAX(salary) FROM `salary` 
+SELECT MIN(salary) FROM `salary` 
+SELECT SUM(salary) FROM `salary` 
+SELECT AVG(salary) FROM `salary` 
+SELECT COUNT(id) FROM `salary` 
+
+SELECT salary FROM salary ORDER BY salary;
+ 
+
+SELECT salary FROM salary ORDER BY salary DESC;
+
+
+
+
+
+
+
+
+
+

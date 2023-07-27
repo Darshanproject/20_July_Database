@@ -1,31 +1,8 @@
-craete database <database name>
-
-CREATE DATABASE july_20;
-
-create table table_name(
-	cloumn names datatype int varchar bigint
-
-);
+git clone <paste url>
 
 
-USE july_20;
-CREATE TABLE person(
-	id int (255),
-    name varchar(50)
-    
-);
+close that terminal and go insdide the floder then right click again and git bash
 
-
-insert into tablename(cloumn_name) values (valuse);
-
-
-INSERT INTO person (id,name) VALUES(1,"Meet");
-
-
-INSERT INTO person (id,name) VALUES(2,"Bhavik");;
-INSERT INTO person (id,name) VALUES(3,"Megha");
-
-
-INSERT INTO person (id,name) VALUES (4,"Niddhi"),(5,"Aditi");
-
-select * from table_name;
+git add .
+git commit -m"commit"
+git push

@@ -1,0 +1,20 @@
+INSERT INTO person(name) VALUES("Heet");
+
+
+DROP TABLE <TABLE_NAME>
+
+CREATE TABLE coustomer(
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name varchar(255) not null,
+    surname varchar(20),
+    email varchar(255)
+);
+
+
+ALTER TABLE coustomer ADD mobile int(10);
+
+
+UPDATE `coustomer` SET `mobile` = '9998036978' WHERE `coustomer`.`id` = 1
+
+
+ALTER TABLE coustomer DROP surname;
